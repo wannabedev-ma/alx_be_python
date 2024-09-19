@@ -5,10 +5,10 @@ match operation:
 	case "/" if num2 == 0 :
                 print("Cannot divide by zero")
 	case "+":
-		print("The result is " + num1 + num2)
+		print(f"The result is {num1 + num2}")
 	case "*":
-                print("The result is " + num1 * num2)
+                print(f"The result is {num1 * num2}")
 	case "/":
-                print("The result is " + num1 / num2)
+                print(f"The result is {num1 / num2}")
 	case "-":
-                print("The result is " + num1 - num2)
+                print(f"The result is {num1 - num2}")
