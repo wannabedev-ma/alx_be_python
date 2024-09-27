@@ -9,7 +9,7 @@ def perform_operation(num1, num2, operation):
 		case 'divide':
 			if num2 == 0:
 				return(num1/num2)
-			else:i
+			elif num2 != 0:
 				return('not divisible by 0')
 		case _:
 			return('wrong input')
