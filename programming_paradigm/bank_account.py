@@ -4,7 +4,8 @@ class BankAccount:
 		self.account_balance = 0
 
 	def deposit(amount):
-		return account_balance += amount
+		account_balance += amount
+		return account_balance
 		
 	def withdraw(self, amount):
         	if self.account_balance >= amount:
