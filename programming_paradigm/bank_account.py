@@ -4,8 +4,11 @@ class BankAccount:
 		self.account_balance = 0
 
 	def deposit(self, amount):
-		self.account_balance += amount
-		return self.account_balance
+        	if amount > 0:
+            		self.account_balance += amount
+            		return "Deposited"
+        	else:
+           		print("Deposit amount must be above zero")
 		
 	def withdraw(self, amount):
         	if 0 < amount <= self.account_balance :
