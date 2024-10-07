@@ -3,8 +3,8 @@ class BankAccount:
 	def __init__(self,account_balance):
 		self.account_balance = 0
 
-	def deposit(amount):
-		account_balance += amount
+	def deposit(self, amount):
+		self.account_balance += amount
 		return account_balance
 		
 	def withdraw(self, amount):
