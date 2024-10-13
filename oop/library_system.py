@@ -1,35 +1,51 @@
 class Book:
-        def __init__(self,title,author):
-                self.title = title
-                self.author = author
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
 
-        def __str__(self):
-            return f"{self.__class__.__name__}: '{self.title}' by {self.author}"
+    def __str__(self):
+        return f"{self.__class__.__name__}: '{self.title}' by {self.author}"
 
 
 class EBook(Book):
-        def __init__(self,file_size,title,author):
-                super().__init__(title,author)
-                self.file_size = file_size
+    def __init__(self, file_size, title, author):
+        super().__init__(title, author)
+        self.file_size = file_size
 
-        def __str__(self):
-            return f"{super().__str__()}, File size: {self.file_size}KB"
+    def __str__(self):
+        return f"{super().__str__()}, File size: {self.file_size}KB"
+
 
 class PrintBook(Book):
-        def __init__(self,page_count,title,author):
-                super().__init__(title,author)
-                self.page_count = page_count
-        def __str__(self):
-            return f"{super().__str__()}, Page count: {self.page_count} pages"
+    def __init__(self, page_count, title, author):
+        super().__init__(title, author)
+        self.page_count = page_count
+
+    def __str__(self):
+        return f"{super().__str__()}, Page count: {self.page_count} pages"
+
 
 class Library:
-        def __init__(self):
-                self.books = []
+    def __init__(self):
+        self.books = []
 
-        def add_book(self, book):
-                self.books.append(book)
+    def add_book(self, book):
+        self.books.append(book)
 
-        def list_books(self,books):
-                for book in self.books:
-                        print(book) 
+    def list_books(self):
+        for book in self.books:
+            print(book)
 
+
+# Example usage
+library = Library()
+
+# Adding different types of books
+ebook1 = EBook(500, "Python Programming", "John Doe")  # 500 KB file size
+printbook1 = PrintBook(350, "Data Science", "Jane Doe")  # 350 pages
+
+library.add_book(ebook1)
+library.add_book(printbook1)
+
+# Listing all books
+library.list_books()
