@@ -36,16 +36,3 @@ class Library:
         for book in self.books:
             print(book)
 
-
-# Example usage
-library = Library()
-
-# Adding different types of books
-ebook1 = EBook(500, "Python Programming", "John Doe")  # 500 KB file size
-printbook1 = PrintBook(350, "Data Science", "Jane Doe")  # 350 pages
-
-library.add_book(ebook1)
-library.add_book(printbook1)
-
-# Listing all books
-library.list_books()
