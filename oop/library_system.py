@@ -22,7 +22,7 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"{super().__str__()}, Page count: {self.page_count}"
+        return f"{super().__str__()}, Page Count: {self.page_count}"
 
 
 class Library:
